@@ -1936,6 +1936,16 @@ progress {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
+  .container.px-5{
+    padding-right: 2rem !important;
+    padding-left: 2rem !important;
+  }
+  .media-column{
+    flex-direction: column;
+  }
+  .media-fix-title{
+    padding-bottom: 1rem;
+  }
 }
 @media (max-width: 767.98px) {
   .table-responsive-md {
