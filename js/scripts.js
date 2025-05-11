@@ -5,7 +5,15 @@
 */
 // This file is intentionally blank
 // Use this file to add JavaScript to your project
+const parallaxContainers = document.querySelectorAll('.parallax-container');
 
-(function(){
-    $('#submitButton')
-})()
+parallaxContainers.forEach((container) => {
+  const parallaxContent = container.querySelector('.parallax-content');
+
+  window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY;
+    const parallaxOffset = scrollPosition * -0.07;
+
+    parallaxContent.style.transform = `translateX(-50%) translateY(${parallaxOffset}px)`;
+  });
+});
